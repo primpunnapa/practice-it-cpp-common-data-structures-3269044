@@ -1,11 +1,40 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
+bool isprime(int n)
+{
+    if (n > 1)
+    {
+        if (n == 2)
+        {
+            return true;
+        }
+        if (n % 2 != 0)
+        {
+            for (int i = 3; i <= sqrt(n); i++)
+            {
+                if (n % i != 0)
+                {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
 void findPrimes(const int arr[], size_t size, std::vector<int> &primes)
 {
-    // TODO: Implement
+    for (int i = 0; i < size; i++)
+    {
+        if (isprime(arr[i]))
+        {
+            primes.push_back(arr[i]);
+        }
+    }
 }
 
 int main()

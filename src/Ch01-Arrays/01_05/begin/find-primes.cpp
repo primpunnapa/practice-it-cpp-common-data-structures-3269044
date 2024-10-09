@@ -5,7 +5,7 @@ using namespace std;
 
 void findPrimes(const int arr[], size_t size, std::vector<int> &primes)
 {
-    // TODO: Implement
+    // TODO
 }
 
 int main()
